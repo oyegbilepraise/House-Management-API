@@ -35,7 +35,6 @@ class Analytics_middle {
                     expire: 43200000 + Date.now(),
                     httpOnly:true,
                     maxAge:3600000*5,
-                    secure:true,
                     sameSite:'none',
                 });
                 console.log(res);
