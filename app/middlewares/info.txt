@@ -1,0 +1,6 @@
+This folder should contain middlewares only
+
+e.g var a = (req,res,next)=>{
+
+
+}

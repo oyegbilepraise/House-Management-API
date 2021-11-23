@@ -1,0 +1,18 @@
+This folder should contain routers only
+
+e.g
+
+var Router =  require('express'); 
+ 
+
+const baseRoute = Router()
+
+const adminRoute = Router()
+ 
+
+adminRoute.post('/properties', middleware);
+ 
+ 
+
+
+module.exports = baseRoute

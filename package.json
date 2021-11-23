@@ -1,0 +1,42 @@
+{
+  "name": "damatal_homes_api",
+  "version": "1.0.0",
+  "description": "Backend for Damatal Homes Real Esate Project",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/finessecodes/damatal_homes_api.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/finessecodes/damatal_homes_api/issues"
+  },
+  "homepage": "https://github.com/finessecodes/damatal_homes_api#readme",
+  "dependencies": {
+    "@supercharge/request-ip": "^1.1.2",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cookie-parser": "^1.4.5",
+    "cors": "^2.8.5",
+    "crypto": "^1.0.1",
+    "dotenv": "^10.0.0",
+    "ejs": "^3.1.6",
+    "express": "^4.17.1",
+    "flutterwave-node": "^1.2.2",
+    "flutterwave-node-v3": "^1.0.9",
+    "jsonwebtoken": "^8.5.1",
+    "mongodb": "^4.1.3",
+    "mongoose": "^5.13.9",
+    "nodemailer": "^6.7.0",
+    "open": "^8.3.0",
+    "randomatic": "^3.1.1",
+    "randomstring": "^1.2.1",
+    "validatorjs": "^3.22.1"
+  }
+}

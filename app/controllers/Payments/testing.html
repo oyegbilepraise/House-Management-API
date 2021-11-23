@@ -1,0 +1,140 @@
+<html>
+    <head>
+           <!-- Latest compiled and minified CSS -->
+            <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+            <!-- jQuery library -->
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+            <!-- Popper JS -->
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+            <!-- Latest compiled JavaScript -->
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+              <style>
+                  .b {
+                            white-space: nowrap; 
+                            width: 20%; 
+                            overflow: hidden;
+                            text-overflow: ellipsis; 
+                             border: none;
+                             background-color: inherit;
+                            /* border: 1px solid #000000; */
+                            }
+                            button{
+                                border:none;
+                                outline: none;
+                                background-color: blue;
+                                color:white;
+                                border-radius:5px;
+                                margin-bottom: 10px;
+                            }
+              </style>
+     </head>
+    <body onload="reloads()">
+
+        <div class="container text-center">
+            <h2>Welcome to the biggy prize winning of this year</h2>
+            <% if(message == 'No campaign goin on'){%>
+            <span  class="mb-4"><%=message%></span>
+
+               <%}%>
+               <% if(message != 'No campaign goin on'){%>
+                <span class="mb-4"> This is where you will see the update</span>
+                   <%}%>
+            <div class="row mt-4">  
+                <% if(link){%>
+                <div class="cloat-right col-6">
+                    <b>Share your link :  </b>
+                   <input type="text" disabled class="b" id="link" value="https://biggyprize.herokuapp.com/register/<%=link%>" >
+                   <button  onclick="myFunction()">Copy link</button>
+
+               </div>
+               <%}%>
+               
+               <% if(count_down){%>
+               <table class="table col-6 col-lg-4">
+                <thead>
+                    <tr>
+                        <th>Ending in</th>
+                 </tr>
+             </thead>
+                   <thead>
+                <tr>
+                <th>Day(s)</th>
+                <th>Hour(s)</th>
+                <th>Minute(s)</th>
+                </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td id="day"><%=count_down.days%> </td>
+                        <td id="hour"><%=count_down.hrs%> </td>
+                        <td id="minute"> <%=count_down.min%> </td>
+                    </tr>
+                </tbody>
+                </table>
+            </div>  
+                                                                                                
+            
+            <div class="table-responsive mt-5 pt-5">
+              <table class="table table-bordered">
+                <thead class="thead-dark">
+                  <tr>
+                    <th>#</th>
+                    <th>Full name</th>
+                    <th>Mobile</th>
+                    <th>Address</th>
+                    <th>Status</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                    <%users.forEach(function(user,index) {%>
+                        <tr>
+                        <td><%=index+1%></td>
+                        <td><%=user.firstname%> <%=user.lastname%></td>
+                        <td><%=user.mobile%></td>
+                        <td><%=user.address%></td>
+                        <td><%=user.count%></td>
+                        </tr>
+                        <%});%>
+                </tbody>
+              </table>
+              <%}%>
+            </div>
+          </div>
+        
+    </body>
+    <script>
+        function myFunction(){
+            /* Get the text field */
+            var copyText = document.getElementById("link");
+
+            /* Select the text field */
+            copyText.select();
+            copyText.setSelectionRange(0, 99999); /* For mobile devices */
+
+            /* Copy the text inside the text field */
+            document.execCommand("copy");
+
+            /* Alert the copied text */
+            // alert("Copied the text: " + copyText.value);
+        }
+       function  reloads(param){
+           let days = document.getElementById("day").innerHTML
+           let hours = document.getElementById("hour").innerHTML
+           let minutes = document.getElementById("minute").innerHTML
+
+           var set;
+           if (days == 0 && hours == 00 && minutes == 00) {
+               clearTimeout(set)
+           } else {
+               set = setTimeout(() => {
+                   location.reload()
+               }, 60000);
+           }
+        }
+    </script>
+
+</html>
