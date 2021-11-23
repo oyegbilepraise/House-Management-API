@@ -33,14 +33,11 @@ class Analytics_middle {
             res.cookie(search_res.cookie.id, search_res.cookie,
                 {
                     expire: 43200000 + Date.now(),
-                    sameSite: "strict",
                     path:"/",
                     HttpOnly: true,
-                    secure:false 
                 });
         //     res.cookie(search_res.cookie.id, search_res.cookie,{expire: 60 + Date.now()});
         Misc.appResponse(res,"200",statusCode=search_res.message,search_res.response,data= search_res.data);
-
     }
 
     // DELETE FROM CART
