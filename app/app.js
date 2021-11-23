@@ -51,8 +51,7 @@ app.use(Cors({
   "optionsSuccessStatus": 200,
   "maxAge":1000,
   "credentials":true,
-  "access-control-expose-headers": Set-Cookie,
-  "allowedHeaders":"Access-Control-Allow-Headers, Content-Type,Authorization,content-type, X-Requested-With,token"
+  "allowedHeaders":"Access-Control-Allow-Headers, Content-Type,Authorization,content-type, X-Requested-With,token,Set-Cookie"
 }));
 // app.use((req, res, next) => {credentials
 //     res.setHeader('Access-Control-Allow-Origin', 'http://localhost:3000')
