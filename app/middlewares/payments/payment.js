@@ -34,6 +34,7 @@ class Analytics_middle {
                 {
                     expire: 43200000 + Date.now(),
                     path:"/",
+                    domain:"http://localhost:3000",
                     HttpOnly: true
                 });
         //     res.cookie(search_res.cookie.id, search_res.cookie,{expire: 60 + Date.now()});
