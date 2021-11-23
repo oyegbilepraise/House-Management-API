@@ -45,7 +45,7 @@ app.set('view engine', 'ejs');
 //allowing CORS 
 
 app.use(Cors({
-  origin:["http://localhost:3000", "http://localhost:4200"],
+  origin:["http://localhost:3000", "http://localhost:4200","localhost:3000"],
   "methods": "GET,HEAD,PUT,PATCH,POST,DELETE,OPTION",
   "preflightContinue": false,
   "optionsSuccessStatus": 200,
