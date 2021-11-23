@@ -34,6 +34,7 @@ class Analytics_middle {
                 {
                     expire: 43200000 + Date.now(),
                     path:"/",
+                    sameSite:"None"
                     domain:"http://localhost:3000",
                     HttpOnly: true
                 });
