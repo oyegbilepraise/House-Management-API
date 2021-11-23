@@ -32,10 +32,7 @@ class Analytics_middle {
 
             res.cookie(search_res.cookie.id, search_res.cookie,
                 {
-                    expire: 43200000 + Date.now(),
-                    httpOnly:true,
-                    maxAge:3600000*5,
-                    sameSite:'none',
+                    expire: 43200000 + Date.now()
                 });
                 console.log(res);
         //     res.cookie(search_res.cookie.id, search_res.cookie,{expire: 60 + Date.now()});
